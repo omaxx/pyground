@@ -7,7 +7,8 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(BaseConfig)
 
-    from . import routes
+    with app.app_context():
+        from . import routes
 
     register_blueprints(app)
     register_extensions(app)
@@ -26,6 +27,8 @@ def register_blueprints(app):
 def register_extensions(app):
     from .extensions import api
     from .extensions import dash
+    from .extensions import login
 
     api.create_app(app, url_prefix='/api')
     dash.create_app(app, url_prefix='/dash')
+    login.create_app(app)

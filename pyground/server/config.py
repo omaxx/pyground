@@ -1,4 +1,5 @@
 class BaseConfig:
+    SECRET_KEY = "CHANGE_ME"
     OPENAPI_JSON_PATH = "api-spec.json"
     OPENAPI_URL_PREFIX = "/api"
     OPENAPI_REDOC_PATH = "/redoc"

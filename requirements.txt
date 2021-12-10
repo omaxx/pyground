@@ -1,0 +1,8 @@
+mongoengine
+Flask
+marshmallow
+dash
+
+PyYAML
+Werkzeug
+WTForms
