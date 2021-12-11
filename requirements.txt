@@ -1,8 +1,14 @@
 mongoengine
-Flask
+
+werkzeug
+flask
+flask-login
+flask-wtf
+wtforms
+
+flask-smorest
 marshmallow
+
 dash
 
 PyYAML
-Werkzeug
-WTForms
