@@ -1,8 +1,10 @@
 from flask import Flask
 
+from pyground import db
+
 
 def create_app():
-    from .config import BaseConfig
+    from .config import BaseConfig, settings
 
     app = Flask(__name__)
     app.config.from_object(BaseConfig)
@@ -12,6 +14,8 @@ def create_app():
 
     register_blueprints(app)
     register_extensions(app)
+
+    db.connect(**settings.get("db", {}))
 
     return app
 

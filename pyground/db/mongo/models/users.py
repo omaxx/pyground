@@ -2,7 +2,7 @@ import mongoengine as me
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
-from .base import BaseDocument
+from . import BaseDocument
 
 
 class User(UserMixin, BaseDocument):

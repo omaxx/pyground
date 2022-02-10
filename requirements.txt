@@ -1,7 +1,14 @@
+python-dotenv
+colorlog
+
 mongoengine
-Flask
+flask
+flask-smorest
 marshmallow
+
 dash
+dash-bootstrap-components
+plotly
 
 PyYAML
 Werkzeug

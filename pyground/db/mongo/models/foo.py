@@ -1,6 +1,6 @@
 import mongoengine as me
 
-from .base import BaseDocument
+from . import BaseDocument
 
 
 class Foo(BaseDocument):

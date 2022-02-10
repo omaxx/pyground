@@ -1,10 +1,10 @@
-import mongoengine as me
+from . import mongo as mongodb
+from .mongo.models import *
 
-from .models import *
-from .errors import *
 
-DB_NAME = __name__.split(".")[0]
+def connect(mongo=None):
+    mongodb.connect(**(mongo or {}))
 
-me.connect(
-    db=DB_NAME,
-)
+
+def disconnect():
+    mongodb.disconnect()

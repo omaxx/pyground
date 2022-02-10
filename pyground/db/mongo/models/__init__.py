@@ -25,3 +25,18 @@ class BaseDocument(me.Document):
     @classmethod
     def list(cls, **kwargs):
         return cls.objects(**kwargs)
+
+    @classmethod
+    def count(cls, **kwargs):
+        return cls.objects.count(**kwargs)
+
+    @classmethod
+    def delete_all(cls):
+        # cls.drop_collection()
+        cls.objects.delete()
+
+
+from .bar import Bar
+from .foo import Foo
+from .users import User
+from .items import Item

@@ -1,3 +1,3 @@
-from pyground.server import create_app
+from pyground.web import create_app
 
-create_app().run(debug=True)
+create_app().run()
