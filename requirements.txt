@@ -3,6 +3,8 @@ colorlog
 
 mongoengine
 flask
+flask-login
+flask-wtf
 flask-smorest
 marshmallow
 
