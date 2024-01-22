@@ -1,5 +1,5 @@
 from click.testing import CliRunner
-from app.__main__ import cli
+from app.cli import cli
 
 
 def test_cli() -> None:
