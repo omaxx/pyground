@@ -2,8 +2,8 @@ from app.hello import hello
 
 
 def test_hello_default() -> None:
-    assert hello() == "Hello world!"
+    assert hello() == "Hello, World!"
 
 
 def test_hello_arg() -> None:
-    assert hello("Jon Snow") == "Hello Jon Snow!"
+    assert hello(name="Jon Snow") == "Hello, Jon Snow!"

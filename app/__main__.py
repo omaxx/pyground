@@ -11,11 +11,18 @@ console = Console()
 
 
 @click.command()
+# fmt: off
 @click.option(
-    "--name", "-n", default=os.getenv("PG_NAME"), show_default=True, required=True
+    "--greet", "-g",
+    default=os.getenv("PG_GREET", "Hello"), show_default=True, required=True,
 )
-def cli(name: str) -> None:
-    console.print(hello(name))
+@click.option(
+    "--name", "-n",
+    default=os.getenv("USER"), show_default=True, required=True,
+)
+# fmt: on
+def cli(greet: str, name: str) -> None:
+    console.print(hello(greet, name))
 
 
 if __name__ == "__main__":
