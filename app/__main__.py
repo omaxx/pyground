@@ -11,7 +11,9 @@ console = Console()
 
 
 @click.command()
-@click.option("--name", "-n", default=os.getenv("PG_NAME", "None"), show_default=True)
+@click.option(
+    "--name", "-n", default=os.getenv("PG_NAME"), show_default=True, required=True
+)
 def cli(name: str) -> None:
     console.print(hello(name))
 
