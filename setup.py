@@ -8,7 +8,7 @@ setup(
     name='pyground',
     version=__version__,
     packages=find_packages(),
-    # url='',
+    url='https://github.com/omaxx/pyground',
     license='MIT',
     author='Maxim Orlov',
     author_email='maxx.orlov@gmail.com',
