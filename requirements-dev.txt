@@ -4,4 +4,6 @@ flake8
 black
 isort
 tox
+build
+twine
 
