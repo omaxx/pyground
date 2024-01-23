@@ -7,7 +7,8 @@ RUN \
     && apt-get upgrade -y  \
     && apt-get install -y --no-install-recommends \
     python3  \
-    python3-pip
+    python3-pip \
+    pipx
 
 # Prevents Python from writing pyc files.
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -41,6 +42,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 COPY . pyground
 
 RUN python3 -m pip install --no-deps --break-system-packages pyground/.
+
+#RUN PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install cowsay
 
 # Switch to the non-privileged user to run the application.
 USER appuser
