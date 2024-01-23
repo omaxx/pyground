@@ -5,7 +5,7 @@ FROM debian:12 as base
 RUN \
    apt-get update  \
     && apt-get upgrade -y  \
-    && apt-get install -y  \
+    && apt-get install -y --no-install-recommends \
     python3  \
     python3-pip
 
@@ -43,7 +43,7 @@ COPY . pyground
 RUN python3 -m pip install --no-deps --break-system-packages pyground/.
 
 # Switch to the non-privileged user to run the application.
-#USER appuser
+USER appuser
 
 # Run the application.
-#CMD app
+CMD app
