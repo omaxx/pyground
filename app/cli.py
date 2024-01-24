@@ -22,7 +22,7 @@ def print_version(ctx: click.Context, _: click.Option, value: Any) -> None:
     ctx.exit()
 
 
-@click.command()
+@click.command(epilog=f"Version: {__version__}")
 # fmt: off
 @click.option(
     "--greet", "-g",
