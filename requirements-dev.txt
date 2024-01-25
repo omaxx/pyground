@@ -6,4 +6,4 @@ isort
 tox
 build
 twine
-
+ipython
