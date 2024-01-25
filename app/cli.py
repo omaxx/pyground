@@ -39,6 +39,9 @@ def print_version(ctx: click.Context, _: click.Option, value: Any) -> None:
 )
 # fmt: on
 def cli(greet: str, name: str, verbose: int) -> None:
+    """
+    Hello world script
+    """
     if verbose == 0:
         level = logging.WARNING
     elif verbose == 1:
